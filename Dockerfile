@@ -1,7 +1,7 @@
 FROM python:3.14.0b3-alpine3.21
 LABEL maintainer="antonbliznuk71@gmail.com"
 
-ENV PYTHOUNNBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 
 WORKDIR app/
 
@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python3","app/main.py"]
+CMD ["python3","main.py"]
